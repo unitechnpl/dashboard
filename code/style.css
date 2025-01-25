@@ -1,5 +1,7 @@
 /* Basic Reset */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,6 +9,15 @@
 
 body {
   font-family: Arial, sans-serif;
+}
+
+/* Responsive Viewport */
+html {
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(135deg, #1f2937, #374151, #4b5563);
 }
 
 .bg-gradient-to-br {
@@ -35,6 +46,7 @@ body {
 
 .card {
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .card-content {
@@ -57,21 +69,32 @@ body {
   content: "\f3c5";
 }
 
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
 @media (min-width: 768px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Footer */
 footer {
   background-color: #1f2937;
 }
 
-/* Responsive adjustments */
-@media (max-width: 767px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+/* Make sure the year is dynamic */
+#year {
+  font-weight: bold;
 }
