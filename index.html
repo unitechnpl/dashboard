@@ -4,71 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kriss Malla - Profile</title>
-  <link rel="stylesheet" href="./code/style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="min-h-screen bg-gradient text-white">
-    <header class="p-6 text-center">
-      <h1 class="text-4xl font-bold">Kriss Malla</h1>
-      <p class="text-lg mt-2">Welcome to my profile website!</p>
-    </header>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white">
+  <header class="p-6 text-center">
+    <h1 class="text-4xl font-bold">Kriss Malla</h1>
+    <p class="text-lg mt-2">Welcome to my profile website!</p>
+  </header>
 
-    <div class="grid">
-      <div class="card">
-        <div class="card-content text-center">
-          <div class="icon user"></div>
-          <h2 class="text-xl font-semibold mt-4">About Me</h2>
-          <p class="mt-2 text-gray-400">
-            Hi, I’m Kriss, an aspiring web developer with a passion for building modern and responsive websites.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content text-center">
-          <div class="icon mail"></div>
-          <h2 class="text-xl font-semibold mt-4">Contact</h2>
-          <p class="mt-2 text-gray-400">Email: kriss.malla@example.com</p>
-          <p class="mt-2 text-gray-400">Phone: +123 456 7890</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content text-center">
-          <div class="icon location"></div>
-          <h2 class="text-xl font-semibold mt-4">Location</h2>
-          <p class="mt-2 text-gray-400">Currently based in Kathmandu, Nepal</p>
-        </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12 lg:px-20 py-10">
+    <div class="card bg-gray-800 shadow-lg rounded-2xl">
+      <div class="card-content text-center">
+        <i class="icon-user mx-auto text-green-400"></i>
+        <h2 class="text-xl font-semibold mt-4">About Me</h2>
+        <p class="mt-2 text-gray-400">
+          Hi, I’m Kriss, an aspiring web developer with a passion for building modern and responsive websites.
+        </p>
       </div>
     </div>
 
-    <div class="text-center py-10">
-      <h2 class="text-2xl font-semibold">Projects</h2>
-      <p class="text-gray-400 mt-2">
-        Below are some of the projects I’ve worked on recently.
-      </p>
-      <div class="grid projects">
-        <div class="card">
-          <div class="card-content">
-            <h3 class="text-lg font-semibold">Project 1</h3>
-            <p class="text-gray-400 mt-2">A responsive portfolio website.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <h3 class="text-lg font-semibold">Project 2</h3>
-            <p class="text-gray-400 mt-2">An e-commerce platform for local businesses.</p>
-          </div>
-        </div>
+    <div class="card bg-gray-800 shadow-lg rounded-2xl">
+      <div class="card-content text-center">
+        <i class="icon-mail mx-auto text-blue-400"></i>
+        <h2 class="text-xl font-semibold mt-4">Contact</h2>
+        <p class="mt-2 text-gray-400">Email: kriss.malla@example.com</p>
+        <p class="mt-2 text-gray-400">Phone: +123 456 7890</p>
       </div>
     </div>
 
-    <footer class="text-center py-6 bg-gray-800">
-      <p class="text-gray-500 text-sm">&copy; <span id="year"></span> Kriss Malla. All rights reserved.</p>
-    </footer>
+    <div class="card bg-gray-800 shadow-lg rounded-2xl">
+      <div class="card-content text-center">
+        <i class="icon-location mx-auto text-red-400"></i>
+        <h2 class="text-xl font-semibold mt-4">Location</h2>
+        <p class="mt-2 text-gray-400">Currently based in Kathmandu, Nepal</p>
+      </div>
+    </div>
   </div>
-  <script>// Set current year in footer
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+
+  <div class="text-center py-10">
+    <h2 class="text-2xl font-semibold">Projects</h2>
+    <p class="text-gray-400 mt-2">
+      Below are some of the projects I’ve worked on recently.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6 px-6">
+      <div class="card bg-gray-800 shadow-lg rounded-2xl">
+        <div class="card-content">
+          <h3 class="text-lg font-semibold">Project 1</h3>
+          <p class="text-gray-400 mt-2">A responsive portfolio website.</p>
+        </div>
+      </div>
+      <div class="card bg-gray-800 shadow-lg rounded-2xl">
+        <div class="card-content">
+          <h3 class="text-lg font-semibold">Project 2</h3>
+          <p class="text-gray-400 mt-2">An e-commerce platform for local businesses.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-6 bg-gray-800">
+    <p class="text-gray-500 text-sm">&copy; <span id="year"></span> Kriss Malla. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
