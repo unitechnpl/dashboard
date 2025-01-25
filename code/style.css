@@ -1,66 +1,77 @@
-/* Global Styles */
-body {
+/* Basic Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
 }
-.bg-gradient {
-  background: linear-gradient(to bottom right, #1a202c, #2d3748, #4a5568);
+
+.bg-gradient-to-br {
+  background: linear-gradient(135deg, #1f2937, #374151, #4b5563);
 }
+
 .text-white {
   color: white;
 }
+
 .text-gray-400 {
-  color: #a0aec0;
-}
-.text-center {
-  text-align: center;
-}
-.font-bold {
-  font-weight: bold;
-}
-.min-h-screen {
-  min-height: 100vh;
-}
-.grid {
-  display: grid;
-  gap: 2rem;
-  padding: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-.projects {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  color: #9ca3af;
 }
 
-/* Card Styles */
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-gray-800 {
+  color: #1f2937;
+}
+
+.text-gray-900 {
+  color: #111827;
+}
+
 .card {
-  background-color: #2d3748;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-}
-.card-content {
-  padding: 1rem;
-}
-.icon {
-  height: 48px;
-  width: 48px;
-  margin: 0 auto;
-}
-.icon.user {
-  background-color: #68d391;
-  border-radius: 50%;
-}
-.icon.mail {
-  background-color: #63b3ed;
-  border-radius: 50%;
-}
-.icon.location {
-  background-color: #f56565;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
-/* Footer */
+.card-content {
+  padding: 20px;
+}
+
+.icon-user, .icon-mail, .icon-location {
+  font-size: 48px;
+}
+
+.icon-user {
+  content: "\f007";
+}
+
+.icon-mail {
+  content: "\f0e0";
+}
+
+.icon-location {
+  content: "\f3c5";
+}
+
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
 footer {
-  background-color: #1a202c;
-  padding: 1rem 0;
+  background-color: #1f2937;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
