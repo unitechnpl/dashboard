@@ -1,6 +1,2 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const profileImg = document.getElementById('profile-img');
-    profileImg.addEventListener('click', () => {
-        alert('Hello, I am Krish Mall!');
-    });
-});
+// Set the current year in the footer
+document.getElementById("year").textContent = new Date().getFullYear();
