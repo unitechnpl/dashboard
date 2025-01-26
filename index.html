@@ -21,7 +21,7 @@
         '', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
         'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-        'w', 'x', 'y', 'z'.
+        'w', 'x', 'y', 'z'
       ];
 
       let text = "Chris!";
@@ -38,7 +38,7 @@
             for (let j of chars) {
               if (j !== "") {
                 document.getElementById('output').textContent = res + j;
-                await new Promise(resolve => setTimeout(resolve, 1000)); // Decrease delay by 40%
+                await new Promise(resolve => setTimeout(resolve, 600)); // Adjust delay
                 if (i === j) {
                   res += j;
                   break;
