@@ -29,6 +29,7 @@
       while (true) {
         let res = "";
 
+        // Simulate typing effect
         for (let i of text) {
           if (i === " ") {
             res += " ";
@@ -47,11 +48,9 @@
           }
         }
 
-        // Replace the text with a single dash during waiting period
+        // Show dash and wait for 1600ms
         document.getElementById('output').textContent = "-";
-
-        // Wait for 1.6 seconds before restarting the loop
-        await new Promise(resolve => setTimeout(resolve, 1600));
+        await new Promise(resolve => setTimeout(resolve, 1600)); // Correctly wait here
       }
     })();
   </script>
