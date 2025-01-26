@@ -15,12 +15,12 @@
   <div id="output"></div>
 
   <script>
-    (async function() {
+    (async function () {
       const chars = [
-        '', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-        'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-        'w', 'x', 'y', 'z'
+        '', '0', '.', '1', '<', '2', '>', '3', '#', '4', '!', '5', '@', '6', '#', '7', '$', '8', '%', '9',
+        'a', '*', 'b', '^', 'c', '*', 'd', '(', 'e', ')', 'f', '-', 'g', '_', 'h', '+', 'i', '=', 'j', '|', 'k',
+        '?', 'l', ',', 'm', ':', 'n', ';', 'o', '{', 'p', '}', 'q', '`', 'r', '~', 's', 'fk', 't', 'u', 'u', 'bro', 'v',
+        '', 'w', '', 'x', '', 'y', '', 'z'
       ];
 
       let text = "fk u bro";
@@ -29,18 +29,19 @@
       while (true) {
         let res = "";
 
-        // Simulate typing effect
+        // Simulate typing effect with random characters
         for (let i of text) {
           if (i === " ") {
             res += " ";
             document.getElementById('output').textContent = res;
           } else {
-            for (let j of chars) {
-              if (j !== "") {
-                document.getElementById('output').textContent = res + j;
-                await new Promise(resolve => setTimeout(resolve, 25)); // Adjust delay
-                if (i === j) {
-                  res += j;
+            while (true) {
+              const randomChar = chars[Math.floor(Math.random() * chars.length)];
+              if (randomChar !== "") {
+                document.getElementById('output').textContent = res + randomChar;
+                await new Promise(resolve => setTimeout(resolve, 5)); // Adjust delay
+                if (randomChar === i) {
+                  res += i;
                   break;
                 }
               }
@@ -48,9 +49,14 @@
           }
         }
 
-        // Show dash and wait for 1600ms
+        // Hold the final text for 1.6 seconds
+        await new Promise(resolve => setTimeout(resolve, 1600));
+
+        // Replace the text with a single dash
         document.getElementById('output').textContent = "-";
-        await new Promise(resolve => setTimeout(resolve, 1600)); // Correctly wait here
+
+        // Wait briefly before restarting
+        await new Promise(resolve => setTimeout(resolve, 400));
       }
     })();
   </script>
