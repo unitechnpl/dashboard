@@ -37,7 +37,7 @@
             for (let j of chars) {
               if (j !== "") {
                 document.getElementById('output').textContent = res + j;
-                await new Promise(resolve => setTimeout(resolve, 200)); // Adjust delay
+                await new Promise(resolve => setTimeout(resolve, 50)); // Adjust delay
                 if (i === j) {
                   res += j;
                   break;
@@ -51,7 +51,7 @@
         document.getElementById('output').textContent = "-";
 
         // Wait for 1.16 seconds before looping again
-        await new Promise(resolve => setTimeout(resolve, 1600));
+        await new Promise(resolve => setTimeout(resolve, 400));
       }
     })();
   </script>
