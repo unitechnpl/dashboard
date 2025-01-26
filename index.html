@@ -1,1 +1,59 @@
-<h1>fk u!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Printing</title>
+  <style>
+    body {
+      font-family: monospace;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    (async function() {
+      const chars = [
+        '', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+        'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+        'w', 'x', 'y', 'z'.
+      ];
+
+      let text = "Chris!";
+      text = text.toLowerCase();
+
+      while (true) {
+        let res = "";
+
+        for (let i of text) {
+          if (i === " ") {
+            res += " ";
+            document.getElementById('output').textContent = res;
+          } else {
+            for (let j of chars) {
+              if (j !== "") {
+                document.getElementById('output').textContent = res + j;
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Decrease delay by 40%
+                if (i === j) {
+                  res += j;
+                  break;
+                }
+              }
+            }
+          }
+        }
+
+        // Replace the text with a single dash during waiting period
+        document.getElementById('output').textContent = "-";
+
+        // Wait for 1.16 seconds before looping again
+        await new Promise(resolve => setTimeout(resolve, 1600));
+      }
+    })();
+  </script>
+</body>
+</html>
