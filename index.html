@@ -37,7 +37,7 @@
             for (let j of chars) {
               if (j !== "") {
                 document.getElementById('output').textContent = res + j;
-                await new Promise(resolve => setTimeout(resolve, 75)); // Adjust delay
+                await new Promise(resolve => setTimeout(resolve, 25)); // Adjust delay
                 if (i === j) {
                   res += j;
                   break;
