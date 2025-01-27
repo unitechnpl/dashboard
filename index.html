@@ -45,6 +45,63 @@
       </div>
     </div>
     </div>  
+  <title>kriss</title>
+  <style>
+    body {
+      font-family: monospace;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    (async function () {
+      const chars = [
+        '', '0', '.', '1', '<', '2', '>', '3', '#', '4', '!', '5', '@', '6', '#', '7', '$', '8', '%', '9',
+        'a', '*', 'b', '^', 'c', '*', 'd', '(', 'e', ')', 'f', '-', 'g', '_', 'h', '+', 'i', '=', 'j', '|', 'k',
+        '?', 'l', ',', 'm', ':', 'n', ';', 'o', '{', 'p', '}', 'q', '`', 'r', '~', 's', 'fk', 't', 'u', 'u', 'bro', 'v',
+        '', 'w', '', 'x', '', 'y', '', 'z'
+      ];
+
+      let text = "fk u bro";
+      text = text.toLowerCase();
+
+      while (true) {
+        let res = "";
+
+        // Simulate typing effect with random characters
+        for (let i of text) {
+          if (i === " ") {
+            res += " ";
+            document.getElementById('output').textContent = res;
+          } else {
+            while (true) {
+              const randomChar = chars[Math.floor(Math.random() * chars.length)];
+              if (randomChar !== "") {
+                document.getElementById('output').textContent = res + randomChar;
+                await new Promise(resolve => setTimeout(resolve, 5)); // Adjust delay
+                if (randomChar === i) {
+                  res += i;
+                  break;
+                }
+              }
+            }
+          }
+        }
+
+        // Hold the final text for 1.6 seconds
+        await new Promise(resolve => setTimeout(resolve, 1600));
+
+        // Replace the text with a single dash
+        document.getElementById('output').textContent = "-";
+
+        // Wait briefly before restarting
+        await new Promise(resolve => setTimeout(resolve, 400));
+      }
+    })();
+  </script>
 </body>
 <style>
   .logos-slider {
