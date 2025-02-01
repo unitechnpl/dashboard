@@ -3,139 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kriss</title>
-  <style>
-    body {
-      font-family: monospace;
-      font-size: 20px;
-      background: #eef2f5;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    h1 {
-      font-family: 'Lato', sans-serif;
-      color: #3D4A54;
-      text-align: center;
-      margin-bottom: auto; /* Push heading to the top */
-    }
-
-    #output {
-      font-size: 24px;
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .logos-slider {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow: hidden;
-      position: fixed;
-      bottom: 0; /* Fixed at the bottom of the page */
-      width: 100%; /* Full-width slider */
-      -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, #000 15%, #000 85%, rgba(0,0,0,0) 100%);
-      mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, #000 15%, #000 85%, rgba(0,0,0,0) 100%);
-      background: white;
-      padding: 10px 0;
-      box-shadow: 0px -3px 8px rgba(61, 74, 84, 0.1), 0px -3px 12px rgba(61, 74, 84, 0.06);
-    }
-
-    .logos-slider-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 20px; /* Add space between logos */
-      animation: slide 30s linear infinite;
-    }
-
-    .logos-slider-container img {
-      width: 100px;
-      max-width: 100px;
-    }
-
-    @keyframes slide {
-      0% {
-        transform: translate3d(0, 0, 0);
-      }
-      100% {
-        transform: translate3d(-100%, 0, 0);
-      }
-    }
-  </style>
+  <title>FKU TXT PRNTN</title>
 </head>
 <body>
-  <h1>Dynamic Typing Effect</h1>
-  <div id="output"></div>
-
-  <div class="logos-slider">
-    <div class="logos-slider-container">
-      <img src="visa.png" alt="Visa">
-      <img src="nasa.png" alt="NASA">
-      <img src="esewa.png" alt="Esewa">
-      <img src="visa.png" alt="Visa">
-      <img src="nasa.png" alt="NASA">
-      <img src="esewa.png" alt="Esewa">
-      <img src="visa.png" alt="Visa">
-      <img src="nasa.png" alt="NASA">
-      <img src="esewa.png" alt="Esewa">
-    </div>
-    <div class="logos-slider-container">
-      <img src="visa.png" alt="Visa">
-      <img src="nasa.png" alt="NASA">
-      <img src="esewa.png" alt="Esewa">
-      <img src="visa.png" alt="Visa">
-      <img src="nasa.png" alt="NASA">
-      <img src="esewa.png" alt="Esewa">
-      <img src="visa.png" alt="Visa">
-      <img src="nasa.png" alt="NASA">
-      <img src="esewa.png" alt="Esewa">
-    </div>
-  </div>
-
-  <script>
-    (async function () {
-      const chars = [
-        '', '0', '.', '1', '<', '2', '>', '3', '#', '4', '!', '5', '@', '6', '#', '7', '$', '8', '%', '9',
-        'a', '*', 'b', '^', 'c', '*', 'd', '(', 'e', ')', 'f', '-', 'g', '_', 'h', '+', 'i', '=', 'j', '|', 'k',
-        '?', 'l', ',', 'm', ':', 'n', ';', 'o', '{', 'p', '}', 'q', '`', 'r', '~', 's', 'fk', 't', 'u', 'u', 'bro', 'v',
-        '', 'w', '', 'x', '', 'y', '', 'z'
-      ];
-
-      let text = "Hello, World!";
-      text = text.toLowerCase();
-
-      while (true) {
-        let res = "";
-
-        for (let i of text) {
-          if (i === " ") {
-            res += " ";
-            document.getElementById('output').textContent = res;
-          } else {
-            while (true) {
-              const randomChar = chars[Math.floor(Math.random() * chars.length)];
-              if (randomChar !== "") {
-                document.getElementById('output').textContent = res + randomChar;
-                await new Promise(resolve => setTimeout(resolve, 5)); // Adjust delay
-                if (randomChar === i) {
-                  res += i;
-                  break;
+  
+<script>
+  // >>>>>>> 707b0361c2ee7bc8154516e8b6b7bf9c14dab5fa
+      (async function () {
+        const chars = [
+          '', '0', '.', '1', '<', '2', '>', '3', '#', '4', '!', '5', '@', '6', '#', '7', '$', '8', '%', '9',
+          'a', '*', 'b', '^', 'c', '*', 'd', '(', 'e', ')', 'f', '-', 'g', '_', 'h', '+', 'i', '=', 'j', '|', 'k',
+          '?', 'l', ',', 'm', ':', 'n', ';', 'o', '{', 'p', '}', 'q', '`', 'r', '~', 's', 'f', 't', 'u', 'u', '', '',
+          '', 'w', '', 'x', '', 'y', '', 'z'
+        ];
+  
+        let text = "Hello, World!";
+        text = text.toLowerCase();
+  
+        while (true) {
+          let res = "";
+  
+          for (let i of text) {
+            if (i === " ") {
+              res += " ";
+              document.getElementById('output').textContent = res;
+            } else {
+              while (true) {
+                const randomChar = chars[Math.floor(Math.random() * chars.length)];
+                if (randomChar !== "") {
+                  document.getElementById('output').textContent = res + randomChar;
+                  await new Promise(resolve => setTimeout(resolve, 5)); // Adjust delay
+                  if (randomChar === i) {
+                    res += i;
+                    break;
+                  }
                 }
               }
             }
           }
+  
+          await new Promise(resolve => setTimeout(resolve, 1600));
+          document.getElementById('output').textContent = "-";
+          await new Promise(resolve => setTimeout(resolve, 400));
         }
-
-        await new Promise(resolve => setTimeout(resolve, 1600));
-        document.getElementById('output').textContent = "-";
-        await new Promise(resolve => setTimeout(resolve, 400));
-      }
-    })();
-  </script>
+      })();
+    </script>
 </body>
 </html>
