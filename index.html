@@ -3,50 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FKU TXT PRNTN</title>
+  <title>fk uText Printing</title>
+  <style>
+    body {
+      font-family: FreeMono, monospace;
+      font-size: 50px;
+    }
+  </style>
 </head>
 <body>
-  
+  <div id="output"></div>
 <script>
-  // >>>>>>> 707b0361c2ee7bc8154516e8b6b7bf9c14dab5fa
-      (async function () {
-        const chars = [
-          '', '0', '.', '1', '<', '2', '>', '3', '#', '4', '!', '5', '@', '6', '#', '7', '$', '8', '%', '9',
-          'a', '*', 'b', '^', 'c', '*', 'd', '(', 'e', ')', 'f', '-', 'g', '_', 'h', '+', 'i', '=', 'j', '|', 'k',
-          '?', 'l', ',', 'm', ':', 'n', ';', 'o', '{', 'p', '}', 'q', '`', 'r', '~', 's', 'f', 't', 'u', 'u', '', '',
-          '', 'w', '', 'x', '', 'y', '', 'z'
-        ];
-  
-        let text = "Hello, World!";
-        text = text.toLowerCase();
-  
-        while (true) {
-          let res = "";
-  
-          for (let i of text) {
-            if (i === " ") {
-              res += " ";
-              document.getElementById('output').textContent = res;
-            } else {
-              while (true) {
-                const randomChar = chars[Math.floor(Math.random() * chars.length)];
-                if (randomChar !== "") {
-                  document.getElementById('output').textContent = res + randomChar;
-                  await new Promise(resolve => setTimeout(resolve, 5)); // Adjust delay
-                  if (randomChar === i) {
-                    res += i;
-                    break;
-                  }
+    (async function () {
+      const chars = [
+        '', '0', '.', '1', '<', '2', '>', '3', '#', '4', '!', '5', '@', '6', '#', '7', '$', '8', '%', '9',
+        'a', '*', 'b', '^', 'c', '*', 'd', '(', 'e', ')', 'f', '-', 'g', '_', 'h', '+', 'i', '=', 'j', '|', 'k',
+        '?', 'l', ',', 'm', ':', 'n', ';', 'o', '{', 'p', '}', 'q', '`', 'r', '~', 's', 'f', 't', 'u', 'u', '', '',
+        '', 'w', '', 'x', '', 'y', '', 'z'
+      ];
+
+      let text = "FK U BRO ";
+      text = text.toLowerCase();
+
+      while (true) {
+        let res = "";
+
+        // Simulate typing effect with random characters
+        for (let i of text) {
+          if (i === " ") {
+            res += " ";
+            document.getElementById('output').textContent = res;
+          } else {
+            while (true) {
+              const randomChar = chars[Math.floor(Math.random() * chars.length)];
+              if (randomChar !== "") {
+                document.getElementById('output').textContent = res + randomChar;
+                await new Promise(resolve => setTimeout(resolve, 5)); // Adjust delay
+                if (randomChar === i) {
+                  res += i;
+                  break;
                 }
               }
             }
           }
-  
-          await new Promise(resolve => setTimeout(resolve, 1600));
-          document.getElementById('output').textContent = "-";
-          await new Promise(resolve => setTimeout(resolve, 400));
         }
-      })();
-    </script>
+
+        // Hold the final text for 1.6 seconds
+        await new Promise(resolve => setTimeout(resolve, 1600));
+
+        // Replace the text with a single dash
+        document.getElementById('output').textContent = "-";
+
+        // Wait briefly before restarting
+        await new Promise(resolve => setTimeout(resolve, 400));
+      }
+    })();
+  </script>
 </body>
 </html>
