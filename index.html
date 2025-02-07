@@ -1,63 +1,132 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>fk uText Printing</title>
-  <style>
-    body {
-      font-family: FreeMono, monospace;
-      font-size: 50px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kriss // ryzen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="https://me.dbsrv.repl.co/c.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
 </head>
+
 <body>
-  <div id="output"></div>
-<script>
-    (async function () {
-      const chars = [
-        '', '0', '.', '1', '<', '2', '>', '3', '#', '4', '!', '5', '@', '6', '#', '7', '$', '8', '%', '9',
-        'a', '*', 'b', '^', 'c', '*', 'd', '(', 'e', ')', 'f', '-', 'g', '_', 'h', '+', 'i', '=', 'j', '|', 'k',
-        '?', 'l', ',', 'm', ':', 'n', ';', 'o', '{', 'p', '}', 'q', '`', 'r', '~', 's', 'f', 't', 'u', 'u', '', '',
-        '', 'w', '', 'x', '', 'y', '', 'z'
-      ];
+    <!-- <audio autoplay loop>
+        <source src="./social/enchanted.mp3" type="audio/mpeg">
+    </audio> -->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#" class="menu"> Portfolio</div>
+            <ul class="menu">
+                <li><a href="#" class="menu-btn">Home</a></li>
+                <li><a href="./web-apps" class="menu-btn">Apps</a></li>
+                <li><a href="./social" class="menu-btn">Social</a></li>
+            </ul>
+            <div class="menu-btn">
+                <!-- <i class="fas fa-bars"></i> -->
+            </div>
+        </div>
+    </nav>
 
-      let text = "FK U BRO ";
-      text = text.toLowerCase();
+    <!-- home section start -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">dev//programmer:</div>
+                <div class="text-2"></div>
+                <br>
+                <div class="text-3"> - FrontEnd & BackEnd Software engineer <b><span id="#int"></b></span></div>
+                <br>
+                <div class="img">
+                    <!-- <div class="social">
+                        <a href="https://fb.com/krishdoth" target="_blank">
+                            <img src="https://cdn1.iconfinder.com/data/icons/social-media-icon-1/112/facebook-64.png">
+                        </a>
+                        <a href="https://www.instagram.com/krisshmalla/" target = "_blank">
+                            <img
+                                src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-64.png">
+                        </a>
+                        <a href="https://github.com/urGODBOY" target="_blank">
+                            <img style="background: white;"
+                                src="https://cdn3.iconfinder.com/data/icons/social-media-2527/24/glyph_github_github_logo_logo_badge_social_media_social_media_website-64.png">
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-      while (true) {
-        let res = "";
+    <!-- footer section start -->
+    <footer>
+        <!-- <span>Created By <a href="#" style="color:whitesmoke">@ Chris </a> -->
+            <!-- <div class="footer-social">
+                <a href="https://fb.com/krishdoth" target="_blank">
+                    <img src="https://cdn1.iconfinder.com/data/icons/social-media-icon-1/112/facebook-64.png" alt="Facebook">
+                </a>
+                <a href="https://github.com/urGODBOY" target="_blank">
+                    <img style="background: white;"
+                        src="https://cdn3.iconfinder.com/data/icons/social-media-2527/24/glyph_github_github_logo_logo_badge_social_media_social_media_website-64.png" 
+                        alt="GitHub">
+                </a>
+            </div> -->
+                <div class="logo-slider">
+                    <div class="logos-slide">
+                        <img src="./test/html.svg">
+                        <img src="./test/css.svg">
+                        <img src="./test/bootstrap.svg">
+                        <img src="./test/js.svg">
+                        <img src="./test/react.svg">
+                        <img src="./test/vue.svg">
+                        <img src="./test/typescript.svg">
+                        <img src="./test/nodejs.svg">
+                        <img src="./test/npm.svg">
+                        <img src="./test/php.svg">
+                        <img src="./test/mysql.svg">
+                        <img src="./test/postgresql.svg">
+                        <img src="./test/python.svg">
+                        <img src="./test/nginx.svg">
+                        <img src="./test/graphql.svg">
+                        <img src="./test/github.svg">
 
-        // Simulate typing effect with random characters
-        for (let i of text) {
-          if (i === " ") {
-            res += " ";
-            document.getElementById('output').textContent = res;
-          } else {
-            while (true) {
-              const randomChar = chars[Math.floor(Math.random() * chars.length)];
-              if (randomChar !== "") {
-                document.getElementById('output').textContent = res + randomChar;
-                await new Promise(resolve => setTimeout(resolve, 5)); // Adjust delay
-                if (randomChar === i) {
-                  res += i;
-                  break;
-                }
-              }
-            }
-          }
-        }
+                        <img src="./test/html.svg">
+                        <img src="./test/css.svg">
+                        <img src="./test/bootstrap.svg">
+                        <img src="./test/js.svg">
+                        <img src="./test/react.svg">
+                        <img src="./test/vue.svg">
+                        <img src="./test/typescript.svg">
+                        <img src="./test/nodejs.svg">
+                        <img src="./test/npm.svg">
+                        <img src="./test/php.svg">
+                        <img src="./test/mysql.svg">
+                        <img src="./test/postgresql.svg">
+                        <img src="./test/python.svg">
+                        <img src="./test/nginx.svg">
+                        <img src="./test/graphql.svg">
+                        <img src="./test/github.svg">
+                    </div>
+                    <!-- <div class="slider-text">Languages</div> -->
+                </div>
+            <center>
+                <h5 style="background-color: #060525; color:antiquewhite; font-family:monospace; font-size: 10px;" >
+                    &nbsp;
+                </h5>
+                <h5 style="background-color: #060525; color:antiquewhite; font-family:monospace; font-size: 10px;" >
+                    &nbsp;
+                </h5>
+            </center>
+    </footer>
 
-        // Hold the final text for 1.6 seconds
-        await new Promise(resolve => setTimeout(resolve, 1600));
-
-        // Replace the text with a single dash
-        document.getElementById('output').textContent = "-";
-
-        // Wait briefly before restarting
-        await new Promise(resolve => setTimeout(resolve, 400));
-      }
-    })();
-  </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
