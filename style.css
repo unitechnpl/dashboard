@@ -1,3 +1,4 @@
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,6 @@ body {
     background-position: center;
     background-attachment: fixed;
     color: white;
-    overflow-x: hidden;
 }
 
 /* Navbar Styles */
@@ -39,6 +39,7 @@ body {
     font-weight: bold;
 }
 
+/* Menu - Hidden by default on mobile */
 .menu {
     display: flex;
     list-style-type: none;
@@ -61,54 +62,11 @@ body {
     color: #f1c40f;
 }
 
+/* Menu button for mobile */
 .menu-responsive {
     display: none;
-}
-
-/* Home Section */
-.home {
-    padding-top: 80px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.home .text-1 {
-    font-size: 32px;
-    font-weight: 700;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adding shadow for better visibility */
-}
-
-.home .text-2 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #f1c40f;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adding shadow for better visibility */
-}
-
-.home .text-3 {
-    font-size: 18px;
-    font-weight: 400;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adding shadow for better visibility */
-}
-
-.footer {
-    background-color: #060525;
-    padding: 20px 0;
-}
-
-.footer .logo-slider {
-    display: flex;
-    overflow: auto;
-    justify-content: space-evenly;
-    margin: 20px 0;
-}
-
-.footer .logos-slide img {
-    width: 40px;
-    height: 40px;
-    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 /* Mobile Styles */
@@ -118,16 +76,21 @@ body {
         text-align: center;
     }
 
+    /* Initially hide the menu */
     .menu {
         display: none;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
+    /* Show the menu when the button is clicked */
+    .menu.show {
+        display: flex;
+    }
+
+    /* Show the hamburger menu */
     .menu-responsive {
         display: block;
-        font-size: 30px;
-        cursor: pointer;
     }
 
     .menu li {
@@ -138,37 +101,11 @@ body {
         font-size: 16px;
         font-weight: bold;
     }
-
-    .home .text-2 {
-        font-size: 28px;
-    }
-
-    .footer .logo-slider {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .footer .logos-slide img {
-        width: 30px;
-        height: 30px;
-    }
 }
 
-@media screen and (max-width: 480px) {
-    .home .text-1 {
-        font-size: 24px;
-    }
-
-    .home .text-3 {
-        font-size: 14px;
-    }
-
-    .menu-btn {
-        font-size: 14px;
-    }
-
-    .footer .logos-slide img {
-        width: 25px;
-        height: 25px;
-    }
+/* Ensure text visibility */
+.home .text-1, .home .text-2, .home .text-3 {
+    text-align: center;
+    color: white;
+    font-weight: 600;
 }
