@@ -1,126 +1,98 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    margin: 0;
+    padding: 0;
     background-image: url('n1.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     color: white;
 }
 
-/* Navbar Styles */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    padding: 10px 0;
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
     z-index: 10;
 }
 
-.navbar .max-width {
+.max-width {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
 }
 
-.navbar .logo a {
-    font-size: 22px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Menu */
 .menu {
-    display: flex;
     list-style-type: none;
-    margin: 0;
-}
-
-.menu li {
-    margin: 0 15px;
+    padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
 .menu-btn {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .menu-btn:hover {
-    color: #f1c40f;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Menu button for mobile */
-.menu-responsive {
-    display: none;
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.home-content .text-1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.home-content .text-2 {
     font-size: 30px;
-    cursor: pointer;
+    margin-top: 10px;
 }
 
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-    .navbar .max-width {
-        flex-direction: column;
-        text-align: center;
-    }
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
 
-    /* Initially hide the menu */
+.footer-social a img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .menu {
-        display: none;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Show the menu when the button is clicked */
-    .menu.show {
-        display: flex;
-    }
-
-    /* Show the hamburger menu */
-    .menu-responsive {
-        display: block;
-    }
-
-    .menu li {
-        margin: 10px 0;
-    }
-
     .menu-btn {
         font-size: 16px;
-        font-weight: bold;
     }
-}
 
-/* Ensure text visibility */
-.home .text-1, .home .text-2, .home .text-3 {
-    text-align: center;
-    color: white;
-    font-weight: 600;
-    z-index: 1; /* Ensure text is on top */
-}
+    .home-content .text-1 {
+        font-size: 30px;
+    }
 
-/* Fix potential SVG overlay issues */
-img, svg {
-    z-index: 2; /* Ensure images and SVGs are below text */
-}
-
-/* Footer Styles */
-footer {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
+    .home-content .text-2 {
+        font-size: 20px;
+    }
 }
