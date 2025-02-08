@@ -117,3 +117,10 @@ document.querySelector('.menu-responsive').addEventListener('click', function() 
         menu.style.display = 'flex';
     }
 });
+
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+}
+
