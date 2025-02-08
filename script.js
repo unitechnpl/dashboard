@@ -104,3 +104,16 @@ function shuffleArray(array) {
 
 
 // logo slider script end
+
+
+
+
+// Toggle the menu on mobile
+document.querySelector('.menu-responsive').addEventListener('click', function() {
+    const menu = document.querySelector('.menu');
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+    }
+});
