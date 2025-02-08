@@ -35,21 +35,24 @@ body {
     font-size: 22px;
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .menu {
     display: flex;
     list-style-type: none;
+    margin: 0;
 }
 
 .menu li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .menu-btn {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
@@ -64,19 +67,24 @@ body {
 }
 
 .home .text-1 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adding shadow for better visibility */
 }
 
 .home .text-2 {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 700;
     color: #f1c40f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adding shadow for better visibility */
 }
 
 .home .text-3 {
     font-size: 18px;
     font-weight: 400;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adding shadow for better visibility */
 }
 
 .footer {
@@ -113,8 +121,13 @@ body {
         margin: 10px 0;
     }
 
+    .menu-btn {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
     .home .text-2 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .footer .logo-slider {
@@ -130,7 +143,7 @@ body {
 
 @media screen and (max-width: 480px) {
     .home .text-1 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .home .text-3 {
