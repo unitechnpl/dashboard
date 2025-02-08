@@ -30,7 +30,7 @@ html{
 section{
     padding: 100px 0;
 }
-.max-width{
+.max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
@@ -46,14 +46,14 @@ section{
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
-.contact .contact-content{
+.contact .contact-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 /*     background: #111010;   */
     justify-content: space-between;
 }
-section .title{
+section .title {
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -140,69 +140,7 @@ section .title::after{
     color: #fff;
 } */
 /* menu btn styling                     old navbar css  down is new navbar css */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0); /* Changed to transparent */
-    padding: 10px 20px;
-}
 
-.navbar .logo {
-    color: #d8d8d8;
-    font-size: 24px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: #d8d8d8;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.nav-links a:hover {
-    color: #d8d8d8;
-}
-
-.hamburger {
-    display: none;
-    font-size: 30px;
-    color: #d8d8d8;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        width: 100%;
-        text-align: center;
-        background-color: transparent; /* Changed to transparent */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: block;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
 .menu-btn{
     color: #fff;
     font-size: 23px;
@@ -928,4 +866,70 @@ h1 {
   background-clip: text;
   -webkit-background-clip:text;
   color: transparent;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0); /* Changed to transparent */
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    color: #d8d8d8;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #d8d8d8;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #d8d8d8;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #d8d8d8;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        background-color: transparent; /* Changed to transparent */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
