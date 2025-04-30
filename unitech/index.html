@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unitech Nepal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      background-color: #0073e6;
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    header .nav-links {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 10px 0;
+      flex-grow: 1;
+    }
+
+    header .nav-links li {
+      margin: 0 20px;
+    }
+
+    header .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    header .nav-links a:hover {
+      text-decoration: underline;
+      color: #ffbf00;
+      transition: color 0.3s ease;
+    }
+
+    .logo {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .landing {
+      background-color: #4da6ff;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .landing h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .landing p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .register-btn {
+      background-color: white;
+      color: #0073e6;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 30px;
+      border: 2px solid #0073e6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .register-btn:hover {
+      background-color: #0073e6;
+      color: white;
+    }
+
+    .register {
+      background-color: #f7f9fc;
+      padding: 60px 0;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .register h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .register p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .register form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .register form input {
+      padding: 15px;
+      width: 80%;
+      max-width: 500px;
+      font-size: 1rem;
+      border-radius: 30px;
+      border: 2px solid #ddd;
+      transition: border-color 0.3s ease;
+    }
+
+    .register form input:focus {
+      border-color: #0073e6;
+    }
+
+    .register form .submit-btn {
+      background-color: #0073e6;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .register form .submit-btn:hover {
+      background-color: #005bb5;
+    }
+
+    .terms-link {
+      color: #0073e6;
+      font-weight: 600;
+    }
+
+    .terms {
+      background-color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .terms h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .terms h3 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+    }
+
+    .terms p {
+      font-size: 1.1rem;
+      margin-top: 15px;
+    }
+
+    .contact {
+      background-color: #f7f9fc;
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #0073e6;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .landing h2 {
+        font-size: 2rem;
+      }
+
+      .landing p {
+        font-size: 1rem;
+      }
+
+      .register-btn {
+        width: 90%;
+      }
+
+      .register form input {
+        width: 90%;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Unitech Nepal</h1>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="#register">Register Now</a></li>
+      </ul>
+      <div class="logo">
+        <img src="unilogo.png" width="80px" height = "80px" alt="Unitech Nepal Logo" />
+      </div>
+    </nav>
+  </header>
+
+  <section class="landing">
+    <div class="container">
+      <h2>Welcome to Unitech Nepal</h2>
+      <p>A platform for earning from typing and freelancing tasks.</p>
+      <a href="#register" class="register-btn">Register Now</a>
+    </div>
+  </section>
+
+  <section id="register" class="register">
+    <div class="container">
+      <h2>Register on Unitech Nepal</h2>
+      <p>Fill out the details below to create your account and start earning!</p>
+      <form id="registerForm" onsubmit="return validateNumber(event)">
+        <input type="text" id="fullname" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="text" id="phone" placeholder="Enter 10-digit number" required />
+        <p id="result"></p>
+        <button type="submit" class="submit-btn">Submit</button>
+        <p>By clicking 'Submit', you agree to our <a href="terms.html" class="terms-link">Terms & Conditions</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need support, feel free to contact us at:</p>
+      <p>Email: <a href="mailto:mcicity645@gmail.com">mcicity645@gmail.com</a></p>
+      <p>Or Email: <a href="mailto:panibarsha124@gmail.com">panibarsha124@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Unitech Nepal. All rights reserved.</p>
+  </footer>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBcf39rBunZ4R835oyyge7JZo6gz0E7PMs",
+      authDomain: "unitech-569b1.firebaseapp.com",
+      projectId: "unitech-569b1",
+      storageBucket: "unitech-569b1.appspot.com",
+      messagingSenderId: "417389601828",
+      appId: "1:417389601828:web:96c9f5b7c5b9c4a217e4b1",
+      measurementId: "G-V7F453HP44"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const registerForm = document.getElementById("registerForm");
+    const fullNameInput = document.getElementById("fullname");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const passwordInput = document.getElementById("password");
+
+    window.validateNumber = function(event) {
+      const number = document.getElementById("phone").value.trim();
+      const regex = /^\d{10}$/;
+
+      if (!regex.test(number)) {
+        document.getElementById("result").textContent = "❌ Invalid number. Please enter exactly 10 digits.";
+        document.getElementById("result").style.color = "red";
+        event.preventDefault();
+        return false;
+      }
+
+      document.getElementById("result").textContent = "✅ Valid number!";
+      document.getElementById("result").style.color = "green";
+      return true;
+    }
+
+    registerForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const fullName = fullNameInput.value;
+      const email = emailInput.value;
+      const phone = phoneInput.value;
+      const password = passwordInput.value;
+
+      try {
+        await addDoc(collection(db, "users"), {
+          fullName,
+          email,
+          phone,
+          password
+        });
+        document.getElementById("result").textContent = "✅ Registration successful! Check email in 2 working days for login link, email & password";
+        document.getElementById("result").style.color = "green";
+        registerForm.reset();
+      } catch (error) {
+        console.error("❌ Error saving to Firebase:", error);
+        document.getElementById("result").textContent = "Error saving data.";
+        document.getElementById("result").style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
